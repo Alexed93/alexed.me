@@ -15,7 +15,7 @@ set :wp_email, 'alexed93@gmail.com'
 set :wp_sitename, 'Alex Edwards'
 
 # The local environment URL.
-set :wp_localurl, 'http://alexed.me.local'
+set :wp_localurl, 'http://alexed.local'
 
 # An identifying name for the application to be used by Capistrano
 set :application, 'wp-deploy'
