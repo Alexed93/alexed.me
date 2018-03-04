@@ -9,10 +9,10 @@ set :branch, 'development'
 set :stage, :staging
 
 # The URL of the website in this environment.
-set :stage_url, 'http://www.example.com'
+set :stage_url, 'http://www.staging.alexed.me'
 
 # The environment's server credentials
-server 'XXX.XXX.XX.XXX', user: 'SSHUSER', roles: %w(web app db)
+server 'elm-01.mixd.co.uk', user: 'mixdremote', roles: %w(web app db)
 
 # The deploy path to the website on this environment's server.
-set :deploy_to, '/deploy/to/path'
+set :deploy_to, '/var/www/vhosts/staging.alexed.me/httpdocs'
