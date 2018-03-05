@@ -30,6 +30,7 @@
     <?php get_template_part( 'views/globals/favicons' ); ?>
 
     <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/css/print.css" media="print">
     <noscript><link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/grunticon/icons.fallback.css" rel="stylesheet"></noscript>
 
