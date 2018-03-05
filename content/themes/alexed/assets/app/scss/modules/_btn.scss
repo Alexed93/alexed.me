@@ -54,7 +54,13 @@ input[type="submit"],
  */
 
 .btn--primary {
-    @include btn($white, $grey);
+    @include btn($white, $black);
+    border-radius: 5px;
+
+    &:hover,
+    &:focus {
+        background: lighten($black, 25%);
+    }
 }
 
 .btn--secondary {}

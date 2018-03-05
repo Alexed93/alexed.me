@@ -41,7 +41,7 @@ $color-nav: $color-link;
 	position: relative;
 	font-size: 1.5rem;
 	padding-bottom: 1rem;
-	border-bottom: 1px solid lighten($black, 75%);
+	border-bottom: 1px solid lighten($black, 85%);
 
 	@include respond-min($bp2) {
 		display: inline-block;

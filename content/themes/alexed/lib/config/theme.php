@@ -110,7 +110,7 @@ function wpst_enqueue_scripts() {
 
     wp_register_script( 'js-main', $js_main, '', null, true );
     wp_enqueue_script( 'js-main' );
-    
+
     wp_localize_script( 'js-main', 'stylesheet', [
         'dir' => get_stylesheet_directory_uri()
     ]);
@@ -141,7 +141,7 @@ if ( get_option("large_crop") === false ) {
  * https://developer.wordpress.org/reference/functions/add_image_size/ for more info.
  */
 
-//add_image_size('banner', 429, 280, true);
+add_image_size('featured_home', 600, 350, true);
 
 
 
