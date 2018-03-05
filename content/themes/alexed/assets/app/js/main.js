@@ -33,8 +33,8 @@
 /* $. Grunticon Load
 \*----------------------------------------------------------------*/
 
-grunticon([
-    stylesheet.dir + "/assets/dist/grunticon/icons.data.svg.css",
-    stylesheet.dir + "/assets/dist/grunticon/icons.data.png.css",
-    stylesheet.dir + "/assets/dist/grunticon/icons.fallback.css"
-]);
+
+
+grunticon([ "/content/themes/alexed/assets/dist/grunticon/icons.data.svg.css",
+    "/content/themes/alexed/assets/dist/grunticon/icons.data.png.css",
+    "/content/themes/alexed/assets/dist/grunticon/icons.fallback.css" ]);

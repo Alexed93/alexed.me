@@ -20,6 +20,7 @@
     <div class="container">
         <a href="/" class="logo | header__logo">
             <?php bloginfo( 'name' ); ?>
+            <i class="icon icon--large icon--logo"></i>
         </a>
 
         <nav class="nav-container | header__nav" id="navigation" role="navigation">
