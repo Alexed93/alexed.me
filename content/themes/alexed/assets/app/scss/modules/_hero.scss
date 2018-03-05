@@ -1,0 +1,45 @@
+/**
+ * Title:
+ *    Hero
+ * Description:
+ *    The Hero area of each template
+ */
+
+
+
+/* $. Setup
+\*----------------------------------------------------------------*/
+
+.hero {
+	background: $black;
+	color: $white;
+
+	h1 {
+		font-weight: $weight-medium;
+	}
+}
+
+.hero__text {
+	padding: $base*2 0;
+
+	@include respond-min($bp4) {
+		padding: $base*4 0;
+	}
+
+	@include respond-min($bp5) {
+		padding: $base*5 0;
+	}
+}
+
+
+
+/* $. Pic
+\*----------------------------------------------------------------*/
+
+.profile-pic {
+	width: 65%;
+
+	@include respond-min($bp2) {
+		width: 75%;
+	}
+}
