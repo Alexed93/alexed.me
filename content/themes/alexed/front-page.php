@@ -24,6 +24,8 @@ get_header();
 <main class="section">
     <div class="container">
 
+        <?php get_template_part('views/work/featured'); ?>
+
     </div><!-- .container -->
 </main><!-- .section -->
 

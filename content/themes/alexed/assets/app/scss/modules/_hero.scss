@@ -40,6 +40,6 @@
 	width: 65%;
 
 	@include respond-min($bp2) {
-		width: 75%;
+		//width: 75%;
 	}
 }
