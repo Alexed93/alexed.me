@@ -18,9 +18,9 @@
 
 <header class="header u-pad@2">
     <div class="container">
-        <a href="/" class="logo | header__logo u-no-border">
+        <a href="/" class="logo | u-no-border">
             <p class="is-hidden"><?php bloginfo( 'name' ); ?></p>
-            <i class="icon icon--logo"></i>
+            <i class="icon icon--logo header__logo"></i>
         </a>
 
         <nav class="nav-container | header__nav" id="navigation" role="navigation">

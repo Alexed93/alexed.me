@@ -16,9 +16,19 @@
 
 .footer {
     @extend %cf;
+    width: 100%;
+    padding: 1.5em;
+    background: $black;
 }
 
 .footer__logo {
+	width: 90px;
+	height: 69px;
+
+	@include respond-min($bp2) {
+		width: 110px;
+		height: 89px;
+	}
 }
 
 
@@ -28,4 +38,17 @@
 
 .copyright {
     @extend %cf;
+}
+
+
+/* $. Extra
+\*----------------------------------------------------------------*/
+
+.social-icons {
+	padding-top: 1em;
+	text-align: left;
+
+	@include respond-min($bp2) {
+		text-align: right;
+	}
 }
