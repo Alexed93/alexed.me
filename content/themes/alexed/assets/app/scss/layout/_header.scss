@@ -29,8 +29,13 @@
 \*----------------------------------------------------------------*/
 
 .header__logo {
-	width: 110px;
-	height: 89px;
+	width: 90px;
+    height: 69px;
+
+    @include respond-min($bp2) {
+        width: 110px;
+        height: 89px;
+    }
 }
 
 
@@ -38,7 +43,16 @@
 \*----------------------------------------------------------------*/
 
 .header__nav {
+    display: none;
+    text-align: right;
+    // z-index: $z-index-2;
+
+    @include respond-min($bp2) {
+        display:block;
+    }
+
     .is-active-nav & {
+        display: block;
     }
 }
 
@@ -48,7 +62,11 @@
 \*----------------------------------------------------------------*/
 
 .header__toggle {
-    @include respond-min($bp3) {
+    display: block;
+    float: right;
+
+    @include respond-min($bp2) {
+        display: none;
     }
 }
 

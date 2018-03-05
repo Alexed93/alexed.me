@@ -77,6 +77,11 @@
 .is-current,
 .is-current a {
     color: $color-text;
+    text-decoration: underline;
+
+    @include respond-min($bp2) {
+        text-decoration: none;
+    }
 }
 
 

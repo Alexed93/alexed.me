@@ -39,32 +39,44 @@ $color-nav: $color-link;
 
 .nav__item {
 	position: relative;
-	display: inline-block;
+	font-size: 1.5rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid lighten($black, 75%);
 
 	@include respond-min($bp2) {
-		font-size: 1.35rem;
+		display: inline-block;
+		padding-bottom: 0;
 		margin-left: 1em;
+		border-bottom: none;
 	}
 }
 
 .nav__item:before {
-	content: "";
-	width: 0;
-	height: 2px;
-	position: absolute;
-	bottom: -5px;
-	background: $black;
-	transition-duration: 0.3s;
+	@include respond-min($bp2) {
+		content: "";
+		width: 0;
+		height: 2px;
+		position: absolute;
+		bottom: -5px;
+		background: $black;
+		transition-duration: 0.3s;
+	}
 }
 
 .nav__item:hover:before, .is-current:before {
-	width: 50%;
-    background: $black;
+	@include respond-min($bp2) {
+		width: 50%;
+	    background: $black;
+	}
 }
 
 .nav__link {
 	text-decoration: none;
 	border: none;
+
+	@include respond-min($bp2) {
+
+	}
 }
 
 /* $. Primary
