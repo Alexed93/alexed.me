@@ -1,0 +1,117 @@
+/**
+ * Title:
+ *    Battenberg
+ * Description:
+ *
+ * Sections:
+ *    $. Setup
+ *    $. Component
+ *    $. Themes
+ *    $. Sizing
+ *    $. Grid
+ */
+
+
+
+/* $. Setup
+\*----------------------------------------------------------------*/
+
+
+/* $. Component
+\*----------------------------------------------------------------*/
+.battenberg {
+    @extend .cf;
+    background-color: $grey-lighter;
+
+    @include respond-min($bp2){
+        display: table;
+    }
+}
+
+.battenberg__box {
+    padding: $base*2;
+
+    @include respond-min($bp3){
+        padding: $base*3;
+    }
+    @include respond-min($bp4){
+        padding: $base*4;
+    }
+    @include respond-min($bp5){
+        padding: $base*7.5;
+    }
+}
+
+.battenberg__box,
+.battenberg__image {
+    @include respond-min($bp2){
+        width: 50%;
+        display: table-cell;
+    }
+}
+
+.battenberg__image {
+    display: none;
+
+    @include respond-min($bp2){
+        display: table-cell;
+        background-size: cover;
+    }
+}
+
+.battenberg__image--pre {
+    display: block;
+    min-height: 150px;
+
+    @include respond-min($bp1){
+        min-height: 225px;
+    }
+    @include respond-min($bp2){
+        display: none;
+    }
+}
+
+.battenberg__title {
+    font-size: 1.75rem;
+    margin-bottom: 0;
+
+    @include respond-min($bp3){
+        font-size: 1.875rem;
+    }
+    @include respond-min($bp4){
+        font-size: 2.125rem;
+    }
+}
+
+.battenberg__subtitle {
+    font-size: 1.125rem;
+    margin-bottom: $base/2;
+
+    @include respond-min($bp3){
+        font-size: 1.25rem;
+    }
+    @include respond-min($bp4){
+        font-size: 1.375rem;
+    }
+}
+
+.battenberg__list-title {
+    margin: 0 0 $base/2;
+}
+
+.battenberg__list {
+    margin-bottom: $base*1.5;
+
+    li {
+        margin-bottom: $base/3;
+    }
+}
+
+.battenberg__text {
+    font-size: 1rem;
+    margin-bottom: $base;
+
+    @include respond-min($bp4){
+        font-size: 0.9375rem;
+    }
+}
