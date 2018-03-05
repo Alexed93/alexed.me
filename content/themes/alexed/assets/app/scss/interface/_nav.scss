@@ -38,17 +38,43 @@ $color-nav: $color-link;
 }
 
 .nav__item {
+	position: relative;
+	display: inline-block;
+
+	@include respond-min($bp2) {
+		font-size: 1.35rem;
+		margin-left: 1em;
+	}
+}
+
+.nav__item:before {
+	content: "";
+	width: 0;
+	height: 2px;
+	position: absolute;
+	bottom: -5px;
+	background: $black;
+	transition-duration: 0.3s;
+}
+
+.nav__item:hover:before, .is-current:before {
+	width: 50%;
+    background: $black;
 }
 
 .nav__link {
+	text-decoration: none;
+	border: none;
 }
-
-
 
 /* $. Primary
 \*----------------------------------------------------------------*/
 
 .nav--primary {
+	@include respond-min($bp2) {
+		float: right;
+		margin-top: -3.75em;
+	}
 }
 
 

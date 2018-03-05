@@ -172,6 +172,9 @@
     hyphens: auto;
 }
 
+.u-text-decoration {
+    text-decoration: none;
+}
 
 /* $. Styling
 \*----------------------------------------------------------------*/
@@ -180,3 +183,4 @@
 .u-rounded  { border-radius: 100%; }
 .u-curved   { border-radius: $base; }
 .u-bordered { border: ($base/2) solid $white; }
+.u-no-border { border: none; }
