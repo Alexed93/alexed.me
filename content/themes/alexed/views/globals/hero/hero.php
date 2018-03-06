@@ -9,10 +9,19 @@
  *
  */
 
+$hero_type = '';
+
+if( is_page_template('tpl-work.php') ):
+    $hero_type = 'hero--work';
+endif;
+
+if( is_home() ):
+    $hero_type = 'hero--blog';
+endif;
 
 ?>
 
-<div class="hero">
+<div class="hero <?php echo $hero_type; ?>">
     <div class="container">
 
         <?php

@@ -43,3 +43,24 @@
 		//width: 75%;
 	}
 }
+
+
+
+/* $. Variations
+\*----------------------------------------------------------------*/
+
+.hero--work {
+	@include respond-min($bp2) {
+		background-image: url("../img/background--work.svg");
+		background-size: cover;
+		background-position: center center;
+	}
+}
+
+.hero--blog {
+	@include respond-min($bp2) {
+		background-image: url("../img/background--blog.svg");
+		background-size: cover;
+		background-position: center center;
+	}
+}

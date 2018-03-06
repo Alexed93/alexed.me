@@ -111,6 +111,12 @@
     padding: $base*1.5;
 }
 
+.u-pad-sides\@4 {
+    @include respond-min($bp2) {
+        padding: 0 $base*4;
+    }
+}
+
 .u-pad-bottom {
     padding-bottom: $base;
 }

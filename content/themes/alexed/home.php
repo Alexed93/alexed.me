@@ -9,31 +9,35 @@
  *
  */
 
+
+// Get the header
+get_header();
+
 ?>
 
-<?php get_template_part('views/globals/breadcrumbs'); ?>
+<?php get_template_part('views/globals/hero/hero'); ?>
 
 <main class="section">
     <div class="container">
+        <?php if ( have_posts() ): ?>
+            <?php while ( have_posts() ) : the_post(); ?>
 
-        <div class="grid">
-            <div class="grid__item grid__item--8-12-bp3">
-                <?php
-                    if ( have_posts() ):
-                        while ( have_posts() ): the_post();
-                            get_template_part('views/post/loop');
-                        endwhile;
-                    else:
-                        get_template_part( 'views/errors/404-posts' );
-                    endif;
+            <article>
+                <?php the_title(); ?>
 
-                    get_template_part( 'views/globals/pagination' );
-                ?>
-            </div>
-            <div class="grid__item grid__item--4-12-bp3">
-                <?php //get_sidebar('news'); ?>
-            </div>
-        </div>
+                <?php if ( $post->post_excerpt ): ?>
+                    <?php echo get_the_excerpt(); ?>
+                <?php endif; ?>
 
+                <?php the_content(); ?>
+            </article>
+
+            <?php endwhile; ?>
+
+        <?php else: ?>
+            <?php get_template_part( 'views/errors/404-posts' ); ?>
+        <?php endif; ?>
     </div><!-- .container -->
 </main><!-- .section -->
+
+<?php get_footer(); ?>

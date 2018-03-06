@@ -45,15 +45,13 @@ if( is_front_page() ) {
 
     // Run the custom query
     $projects = wpst_get_projects(
-        $excludes = ''
+        $excludes = '',
+        $count = 6
     );
 
 }
 
 ?>
-
-<h2 class="u-zero-bottom u-zero-top">Other recent work</h2>
-<p class="section__introduction delta u-push-top/2 u-zero-bottom">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
 
 <div class="test--flexbox u-push-top@2"> <!-- Projects results start -->
 
@@ -70,7 +68,7 @@ if( is_front_page() ) {
                 <?php $wp_query = $projects; get_template_part( 'views/globals/pagination' ); wp_reset_query(); ?>
             <?php endif; ?>
 
-        <?php else : ?>
+        <?php wp_reset_postdata(); else: ?>
             <?php get_template_part( 'views/errors/404-posts' ); ?>
         <?php endif; wp_reset_query(); ?>
 

@@ -29,6 +29,8 @@ get_header();
     <?php get_template_part('views/testimonials'); ?>
 
     <div class="container">
+        <h2 class="u-zero-bottom u-zero-top">Other recent work</h2>
+        <p class="section__introduction delta u-push-top/2 u-zero-bottom">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
         <?php get_template_part('views/work/loop'); ?>
     </div>
     </div><!-- .container -->

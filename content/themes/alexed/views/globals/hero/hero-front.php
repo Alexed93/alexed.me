@@ -2,9 +2,9 @@
     <div class="grid__item grid__item--12-12 grid__item--6-12-bp2">
         <div class="hero__text">
             <h1 class="u-zero-bottom"">Alex Edwards</h1>
-            <h2 class="u-zero-top u-zero-bottom">Web developer</h2>
-            <p class="delta u-push-top/2 u-zero-bottom"">
-                Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.
+            <h2 class="u-zero-top u-zero-bottom"><?php echo get_field('subtitle'); ?></h2>
+            <p class="delta u-push-top/2 u-zero-bottom">
+                <?php echo get_the_excerpt(); ?>
             </p>
         </div>
     </div>

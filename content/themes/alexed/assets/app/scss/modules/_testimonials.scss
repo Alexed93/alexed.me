@@ -19,6 +19,7 @@
 	text-align: center;
 
 	@include respond-min($bp2) {
+		padding: $base*3 $base*3 $base*3.5 $base*3;
 		margin-bottom: $base*2;
 	}
 }
@@ -32,5 +33,4 @@
 }
 
 .testimonial__author {
-
 }
