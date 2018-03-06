@@ -120,8 +120,7 @@ module.exports = function( grunt ) {
             dist: {
                 files: {
                     '<%= dirs.assets_output %>/css/styles.css': [
-                        '<%= dirs.assets_input %>/scss/styles.scss',
-                        '<%= dirs.modules %>/slick-carousel/slick/slick.scss'
+                        '<%= dirs.assets_input %>/scss/styles.scss'
                     ],
                     '<%= dirs.assets_output %>/css/ie.css': [
                         '<%= dirs.assets_input %>/scss/ie.scss'

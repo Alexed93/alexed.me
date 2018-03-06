@@ -118,6 +118,24 @@
 }
 
 
+/* $. Effects
+\*----------------------------------------------------------------*/
+
+.slick-dots {
+    bottom: -45px;
+}
+
+.slick-dots li button {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: $white;
+}
+
+.slick-dots li.slick-active button {
+    background: $black;
+    border: 1px solid $white;
+}
 
 /* $. Effects
 \*----------------------------------------------------------------*/

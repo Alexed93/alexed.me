@@ -45,6 +45,20 @@
         console.log('toggled');
     });
 
+    /**
+     * Testimonial
+     */
+    $('.testimonial').slick({
+        dots: true,
+        infinite: true,
+        speed: 1200,
+        arrows: false,
+        autoplay: true,
+        fade: true,
+        swipeToSlide: true,
+        mobileFirst: true,
+    });
+
 })(jQuery);
 
 
@@ -54,6 +68,8 @@
 
 
 
-grunticon([ "/content/themes/alexed/assets/dist/grunticon/icons.data.svg.css",
+grunticon([
+    "/content/themes/alexed/assets/dist/grunticon/icons.data.svg.css",
     "/content/themes/alexed/assets/dist/grunticon/icons.data.png.css",
-    "/content/themes/alexed/assets/dist/grunticon/icons.fallback.css" ]);
+    "/content/themes/alexed/assets/dist/grunticon/icons.fallback.css"
+]);
