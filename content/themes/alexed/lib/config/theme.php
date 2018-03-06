@@ -141,7 +141,7 @@ if ( get_option("large_crop") === false ) {
  * https://developer.wordpress.org/reference/functions/add_image_size/ for more info.
  */
 
-add_image_size('featured_home', 600, 350, true);
+add_image_size('project_thumbnail', 600, 350, true);
 
 
 

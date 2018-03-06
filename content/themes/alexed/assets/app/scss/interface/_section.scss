@@ -67,3 +67,9 @@
         padding: ($base*4) 0 ($base*4) 0;
     }
 }
+
+.section__introduction {
+    @include respond-min($bp2) {
+        width: 75%;
+    }
+}

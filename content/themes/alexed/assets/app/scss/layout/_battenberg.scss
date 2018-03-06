@@ -47,7 +47,17 @@
         padding: 0;
 
         @include respond-min($bp2) {
-            padding: 0 $base*2;
+            padding: 0 0 0 $base*2;
+        }
+    }
+}
+
+.battenberg--left {
+    .battenberg__box {
+        padding: 0;
+
+        @include respond-min($bp2) {
+            padding: 0 $base*2 0 0;
         }
     }
 }

@@ -30,7 +30,7 @@ $i = 1;
             $btn_url      = get_the_permalink($featured_project);
             $btn_label    = 'View the ' . $title . ' project';
             $image        = get_field('featured_image', $featured_project);
-            $image_url    = $image['sizes']['featured_home'];
+            $image_url    = $image['sizes']['project_thumbnail'];
             $box_output   = '';
             $image_output = '';
 

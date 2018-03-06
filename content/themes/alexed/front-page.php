@@ -25,6 +25,8 @@ get_header();
     <div class="container">
 
         <?php get_template_part('views/work/featured'); ?>
+        <?php get_template_part('views/testimonials'); ?>
+        <?php get_template_part('views/work/loop'); ?>
 
     </div><!-- .container -->
 </main><!-- .section -->

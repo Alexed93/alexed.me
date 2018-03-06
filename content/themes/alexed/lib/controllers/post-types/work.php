@@ -29,23 +29,21 @@
  *
  * @return object  WP_Query instance
  */
-function wpst_get_projects ( $parent = 0, $excludes = array(), $count = -1, $orderby = 'menu_order', $order = 'ASC' ) {
-
+function wpst_get_projects($excludes = [], $count = -1 ) {
     // Define arguments for query.
     $args = array(
-        'post_type'      => 'work',
-        'post_parent'    => $parent,
-        'posts_per_work' => $count,
+        'post_type' => 'work',
+        'post_status' => 'publish',
         'post__not_in'   => $excludes,
-        'orderby'        => $orderby,
-        'order'          => $order
+        'posts_per_page' => $count,
+        'offset' => 0
     );
 
-    // Create new instance of WP_Query class.
-    $output = new WP_Query( $args );
-
-    // Return the results
-    return $output;
+    $offset = isset( $_GET["offset"] ) ? sanitize_text_field( $_GET["offset"] ) : 0;
+    if ( $offset ) {
+        $args['offset'] = $offset;
+    }
+    return new WP_Query( $args );
 }
 
 
