@@ -13,12 +13,17 @@
         <div class="card__image u-push-bottom" style="background-image: url('<?php echo $image_url; ?>');"></div>
 
         <div class="card__detail"> <!-- Additional projects card text start -->
-            <h3 class="gamma u-push-bottom/2"><?php echo $title; ?></h3>
-            <p class="u-zero-bottom"><?php the_excerpt(); ?></p>
+            <h3 class="gamma u-push-bottom/2">
+                <?php echo $title; ?>
+            </h3>
 
-                <a href="<?php echo $btn_url; ?>" class="btn btn--primary card__button">
-                    <?php echo $btn_label; ?>
-                </a>
+            <p class="u-zero-bottom">
+                <?php the_excerpt(); ?>
+            </p>
+
+            <a href="<?php echo $btn_url; ?>" class="btn btn--primary card__button">
+                <?php echo $btn_label; ?>
+            </a>
         </div> <!-- Additional project card detail end -->
 
     </div> <!-- Additional project card end -->

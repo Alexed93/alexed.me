@@ -60,7 +60,7 @@ $color-text: $black;
 $color-background: $white;
 $color-link: $black;
 // $color-link-hover: mix($blue-light, white, 50%);
-$color-link-hover: $black;
+$color-link-hover: lighten($black, 25%);
 
 /* palette */
 $color-brand-blue:    $blue;

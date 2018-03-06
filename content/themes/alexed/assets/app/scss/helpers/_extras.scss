@@ -142,3 +142,12 @@
 
 /* Animation */
 
+
+/* $. Extra
+\*----------------------------------------------------------------*/
+
+.post {
+    @include respond-min($bp2) {
+        padding-right: $base*5;
+    }
+}
