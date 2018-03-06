@@ -11,17 +11,24 @@
 
     a {
         margin: 0 $base/4;
-        line-height: 1;
-        border-bottom: 1px solid $color-link;
+        font-size: 1.25rem;
+        // border-bottom: 1px solid $color-link;
     }
 
     .pages {
-        margin-right: $base*2;
-        font-size: .85rem;
+        // margin-right: $base;
     }
 
     .first,
     .last {
-        border-bottom: 0;
+        // border-bottom: 0;
+    }
+
+    .disabled a {
+        border-bottom: none;
+    }
+
+    .last {
+        margin-left: $base/2;
     }
 }
