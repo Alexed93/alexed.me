@@ -19,7 +19,6 @@
                 <a href="<?php echo $btn_url; ?>" class="btn btn--primary card__button">
                     <?php echo $btn_label; ?>
                 </a>
-
         </div> <!-- Additional project card detail end -->
 
     </div> <!-- Additional project card end -->
