@@ -44,10 +44,12 @@ h1, .alpha {
 
 h2, .beta {
     font-size: 1.875rem;
+    // font-weight: $weight-medium;
 }
 
 h3, .gamma {
     font-size: 1.5rem;
+    font-weight: $weight-medium;
 }
 
 h4, .delta {
