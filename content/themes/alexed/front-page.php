@@ -23,11 +23,14 @@ get_header();
 
 <main class="section">
     <div class="container">
-
         <?php get_template_part('views/work/featured'); ?>
-        <?php get_template_part('views/testimonials'); ?>
-        <?php get_template_part('views/work/loop'); ?>
+    </div>
 
+    <?php get_template_part('views/testimonials'); ?>
+
+    <div class="container">
+        <?php get_template_part('views/work/loop'); ?>
+    </div>
     </div><!-- .container -->
 </main><!-- .section -->
 

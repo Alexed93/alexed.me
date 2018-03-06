@@ -100,6 +100,7 @@ module.exports = function( grunt ) {
                     ],
                     '<%= dirs.assets_output %>/js/head.min.js': [
                         '<%= dirs.modules %>/jquery/dist/jquery.js',
+                        '<%= dirs.modules %>/slick-carousel/slick/slick.js',
                         '<%= dirs.assets_input %>/js/vendors/modernizr.js',
                         '<%= dirs.assets_input %>/js/head.js'
                     ]
@@ -119,7 +120,8 @@ module.exports = function( grunt ) {
             dist: {
                 files: {
                     '<%= dirs.assets_output %>/css/styles.css': [
-                        '<%= dirs.assets_input %>/scss/styles.scss'
+                        '<%= dirs.assets_input %>/scss/styles.scss',
+                        '<%= dirs.modules %>/slick-carousel/slick/slick.scss'
                     ],
                     '<%= dirs.assets_output %>/css/ie.css': [
                         '<%= dirs.assets_input %>/scss/ie.scss'

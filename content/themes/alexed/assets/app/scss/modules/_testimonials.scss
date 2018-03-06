@@ -1,0 +1,36 @@
+/**
+ * Title:
+ *    Testimonials
+ * Description:
+ *    Styling for the testimonials slider
+ */
+
+
+
+/* $. Stuff
+\*----------------------------------------------------------------*/
+
+.testimonials {
+	width: 100%;
+	padding: $base*2;
+	margin-bottom: $base;
+	background: $black;
+	color: $white;
+	text-align: center;
+
+	@include respond-min($bp2) {
+		margin-bottom: $base*2;
+	}
+}
+
+.testimonial__title {
+	font-weight: $weight-medium;
+}
+
+.testimonial__quote {
+	font-weight: $weight-normal;
+}
+
+.testimonial__author {
+
+}
