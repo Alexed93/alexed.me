@@ -39,7 +39,7 @@ get_header();
                             <?php the_title(); ?>
                         </a>
 
-                        <h4 class="date epsilon u-push-top/2 u-push-bottom u-weight-medium zeta">
+                        <h4 class="date epsilon u-push-top u-push-bottom u-weight-medium zeta">
                             Published on: <?php the_date('Y-m-d'); ?>
                         </h4>
 
@@ -61,7 +61,7 @@ get_header();
             </div>
 
             <div class="grid__item grid__item--3-12-bp2">
-                <?php get_sidebar(); ?>
+                <?php get_sidebar('blog'); ?>
             </div>
 
         </div>
