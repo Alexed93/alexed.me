@@ -15,7 +15,7 @@ if( is_page_template('tpl-work.php') ):
     $hero_type = 'hero--work';
 endif;
 
-if( is_home() ):
+if( is_home() || is_category() ):
     $hero_type = 'hero--blog';
 endif;
 

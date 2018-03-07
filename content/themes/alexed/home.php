@@ -24,32 +24,7 @@ get_header();
             <div class="grid__item grid__item--9-12-bp2">
                 <?php if ( have_posts() ): ?>
                     <?php while ( have_posts() ) : the_post(); ?>
-                    <?php
-                        $excerpt = get_the_excerpt();
-
-                        if( $excerpt ):
-                            $excerpt = get_the_excerpt();
-                        else:
-                            $excerpt = wp_trim_words(the_content($post->ID), 25, "...");
-                        endif;
-                    ?>
-
-                    <article class="post u-push-bottom">
-                        <a href="<?php echo get_permalink(); ?>" class="gamma u-push-bottom/2">
-                            <?php the_title(); ?>
-                        </a>
-
-                        <h4 class="date epsilon u-push-top u-push-bottom u-weight-medium zeta">
-                            Published on: <?php the_date('Y-m-d'); ?>
-                        </h4>
-
-                        <?php if ( $excerpt ): ?>
-                            <p class="u-zero-bottom u-zero-top">
-                                <?php echo $excerpt; ?>
-                            </p>
-                        <?php endif; ?>
-                    </article>
-
+                        <?php get_template_part( 'views/post/index' ); ?>
                     <?php endwhile; ?>
 
                     <!-- Pagination -->

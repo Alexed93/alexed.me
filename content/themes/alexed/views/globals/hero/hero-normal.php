@@ -1,11 +1,16 @@
 <?
 
 $blog_page = get_option( 'page_for_posts' );
+$current_cat = is_category( get_queried_object() ) ? get_queried_object()->name : '';
 
 if( is_home() ):
     $title = get_the_title( $blog_page );
     $subtitle = get_field( 'subtitle', $blog_page );
     $excerpt = get_the_excerpt( $blog_page );
+elseif( is_category() ):
+    $title = $current_cat;
+    $subtitle = '';
+    $excerpt = 'Showing blog posts from the ' . $current_cat . ' category.';
 else:
     $title = get_the_title();
     $subtitle = get_field( 'subtitle' );
