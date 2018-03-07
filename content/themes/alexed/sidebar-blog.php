@@ -16,7 +16,7 @@ $current_cat = is_category( get_queried_object() ) ? get_queried_object()->name 
 <aside class="sidebar" role="complementary">
     <?php if ( $categories ) : ?>
         <article class="sidebar__section">
-            <h2 class="delta | sidebar__heading">
+            <h2 class="delta | sidebar__heading u-weight-medium">
                 Categories
             </h2>
             <div class="sidebar__content">

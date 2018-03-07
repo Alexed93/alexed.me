@@ -146,7 +146,7 @@
 /* $. Extra
 \*----------------------------------------------------------------*/
 
-.post {
+.post__card {
     @include respond-min($bp2) {
         padding-right: $base*5;
     }

@@ -11,7 +11,7 @@
 
 ?>
 
-<article class="post u-push-bottom">
+<article class="post__card u-push-bottom">
     <a href="<?php echo get_permalink(); ?>" class="gamma u-push-bottom/2">
         <?php the_title(); ?>
     </a>
