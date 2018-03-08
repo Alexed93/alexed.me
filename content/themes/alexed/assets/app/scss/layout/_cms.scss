@@ -50,7 +50,7 @@
 
 .alignleft {
 
-    @include respond-min($bp2) {
+    @include respond-min($bp3) {
         float: left;
         margin: 1rem 1rem 0 0;
     }
@@ -59,7 +59,7 @@
 
 .alignright {
 
-    @include respond-min($bp2) {
+    @include respond-min($bp3) {
         float: right;
         margin: 1rem 0 0 1rem;
         text-align: right;
@@ -69,7 +69,7 @@
 
 .aligncenter {
 
-    @include respond-min($bp2) {
+    @include respond-min($bp3) {
         display: block;
         margin: 0 auto;
     }
