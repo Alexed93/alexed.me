@@ -17,6 +17,18 @@
 	h1 {
 		font-weight: $weight-medium;
 	}
+
+	a {
+	    color: $white;
+	    border-bottom: 1px solid $white;
+
+	    &:hover,
+	    &:focus,
+	    &:active {
+	        color: $grey-light;
+	        border-bottom-color: $grey-light;
+	    }
+	}
 }
 
 .hero__text {
