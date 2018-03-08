@@ -106,6 +106,7 @@ get_header();
         </div>
         <?php endif; ?>
 
+        <?php if( $quote && $date_author ): ?>
         <div class="testimonials testimonials--inverted">
             <div class="container container--small ">
                 <div class="testimonial">
@@ -125,6 +126,7 @@ get_header();
                 </div>
             </div>
         </div>
+        <?php endif; ?>
 
     </main>
 
