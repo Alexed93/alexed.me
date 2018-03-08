@@ -48,7 +48,7 @@
     /**
      * Testimonial
      */
-    $('.testimonial').slick({
+    $('.js-testimonial').slick({
         dots: true,
         infinite: true,
         speed: 1200,

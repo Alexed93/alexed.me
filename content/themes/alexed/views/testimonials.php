@@ -17,7 +17,7 @@ $testimonials = get_field('testimonials');
 <div class="testimonials">
     <div class="container container--small ">
         <?php if( have_rows('testimonials') ): ?>
-        <div class="testimonial">
+        <div class="testimonial js-testimonial">
             <?php while ( have_rows('testimonials') ) : the_row(); ?>
                 <?php
                     $title          = get_sub_field('testimonial_title');

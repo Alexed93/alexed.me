@@ -8,30 +8,35 @@
  *
  */
 
-$image              = get_field('featured_image');
-$image_url          = $image['sizes']['project_thumbnail'];
+$image                  = get_field('featured_image');
+$image_url              = $image['sizes']['project_thumbnail'];
 
-$brief              = get_field('brief');
+$brief                  = get_field('brief');
 
-$image_left         = get_field('image_left');
-$image_left_url     = $image_left['sizes']['project_thumbnail'];
+$image_left             = get_field('image_left');
+$image_left_url         = $image_left['sizes']['project_thumbnail'];
 
-$image_right        = get_field('image_right');
-$image_right_url    = $image_right['sizes']['project_thumbnail'];
+$image_right            = get_field('image_right');
+$image_right_url        = $image_right['sizes']['project_thumbnail'];
 
-$image_full        = get_field('image_full');
-$image_full_url    = $image_full['sizes']['project_thumbnail_full'];
+$image_full             = get_field('image_full');
+$image_full_url         = $image_full['sizes']['project_thumbnail_full'];
 
-$iphone_featured         = get_field('iphone_featured');
-$iphone_featured_url     = $iphone_featured['sizes']['project_thumbnail_iphone'];
+$iphone_featured        = get_field('iphone_featured');
+$iphone_featured_url    = $iphone_featured['sizes']['project_thumbnail_iphone'];
 
-$iphone_left         = get_field('iphone_left');
-$iphone_left_url     = $iphone_left['sizes']['project_thumbnail_iphone'];
+$iphone_left            = get_field('iphone_left');
+$iphone_left_url        = $iphone_left['sizes']['project_thumbnail_iphone'];
 
-$iphone_right        = get_field('iphone_right');
-$iphone_right_url    = $iphone_right['sizes']['project_thumbnail_iphone'];
+$iphone_right           = get_field('iphone_right');
+$iphone_right_url       = $iphone_right['sizes']['project_thumbnail_iphone'];
 
+$quote                  = get_field('feedback_quote');
+$author                 = get_field('feedback_author');
+$date                   = get_field('feedback_date');
+$date_author            = $author . ', ' . '(' . $date . ')';
 
+$images                 = get_field('gallery');
 
 // Get the header
 get_header();
@@ -78,6 +83,18 @@ get_header();
             <?php the_content(); ?>
         </div>
 
+        <?php if( $images ): ?>
+        <div class="container container--image_gallery">
+            <div class="grid grid--spaced">
+                <?php foreach( $images as $image ): ?>
+                    <div class="grid__item grid__item--3-12-bp3">
+                        <img class="image_gallery__image" src="<?php echo $image['sizes']['gallery_image']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <?php endif; ?>
+
         <?php if( $iphone_featured_url && $iphone_left_url && $iphone_right_url): ?>
         <div class="container container--iphone">
             <div class="iphone__container u-align-center">
@@ -88,6 +105,26 @@ get_header();
             </div>
         </div>
         <?php endif; ?>
+
+        <div class="testimonials testimonials--inverted">
+            <div class="container container--small ">
+                <div class="testimonial">
+                    <div class="testimonial__container">
+                        <h2 class="u-push-bottom/2 u-zero-top gamma testimonial__title">
+                            Client feedback
+                        </h2>
+
+                        <blockquote class="u-zero-top u-push-bottom delta u-style-normal testimonial__quote">
+                            <?php echo $quote; ?>
+                        </blockquote>
+
+                        <h3 class="u-zero-bottom u-zero-top delta u-style-italic testimonial__author">
+                            <?php echo $date_author; ?>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
 

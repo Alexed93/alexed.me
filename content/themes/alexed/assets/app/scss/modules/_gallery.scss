@@ -1,0 +1,7 @@
+.image_gallery__image {
+	margin-bottom: $base;
+
+	@include respond-min($bp2) {
+		margin-bottom: $base*1.5;
+	}
+}
