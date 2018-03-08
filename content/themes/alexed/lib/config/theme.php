@@ -142,6 +142,7 @@ if ( get_option("large_crop") === false ) {
  */
 
 add_image_size('project_thumbnail', 600, 350, true);
+add_image_size('project_thumbnail_iphone', 220, 380, true);
 add_image_size('project_thumbnail_full', 1240, 350, true);
 add_image_size('content_image', 600, 600, true);
 

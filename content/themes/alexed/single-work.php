@@ -22,6 +22,17 @@ $image_right_url    = $image_right['sizes']['project_thumbnail'];
 $image_full        = get_field('image_full');
 $image_full_url    = $image_full['sizes']['project_thumbnail_full'];
 
+$iphone_featured         = get_field('iphone_featured');
+$iphone_featured_url     = $iphone_featured['sizes']['project_thumbnail_iphone'];
+
+$iphone_left         = get_field('iphone_left');
+$iphone_left_url     = $iphone_left['sizes']['project_thumbnail_iphone'];
+
+$iphone_right        = get_field('iphone_right');
+$iphone_right_url    = $iphone_right['sizes']['project_thumbnail_iphone'];
+
+
+
 // Get the header
 get_header();
 
@@ -36,7 +47,7 @@ get_header();
         <div class="container container--small">
             <div class="macbook__container">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/macbook.svg" class="macbook u-margin-center" alt="A thumbnail of the <?php the_title(); ?> project." title="<?php the_title(); ?>">
-                <div class="featured__image" style="background-image: url('<?php echo $image_url; ?>');"></div>
+                <div class="featured__image featured__image--macbook" style="background-image: url('<?php echo $image_url; ?>');"></div>
             </div>
             <h2 class="brief__title u-push-top u-push-bottom/2">Project brief</h2>
             <p class="brief u-pad-sides@4"><?php echo $brief; ?></p>
@@ -44,14 +55,15 @@ get_header();
 
         <div class="container container--gallery">
 
-            <?php if( $image_right_url && $image_left_url ): ?>
             <div class="grid grid--spaced">
-                <div class="grid__item grid__item--6-12-bp2">
-                    <div class="grid__image" style="background-image: url('<?php echo $image_left_url; ?>');"></div>
-                </div>
-                <div class="grid__item grid__item--6-12-bp2">
-                    <div class="grid__image" style="background-image: url('<?php echo $image_right_url; ?>');"></div>
-                </div>
+                <?php if( $image_right_url && $image_left_url ): ?>
+                    <div class="grid__item grid__item--6-12-bp2">
+                        <div class="grid__image" style="background-image: url('<?php echo $image_left_url; ?>');"></div>
+                    </div>
+                    <div class="grid__item grid__item--6-12-bp2">
+                        <div class="grid__image" style="background-image: url('<?php echo $image_right_url; ?>');"></div>
+                    </div>
+                <?php endif; ?>
 
                 <?php if( $image_full_url ): ?>
                     <div class="grid__item">
@@ -59,13 +71,23 @@ get_header();
                     </div>
                 <?php endif; ?>
             </div>
-            <?php endif; ?>
 
         </div>
 
-        <div class="container container--content">
+        <div class="container container--content cf">
             <?php the_content(); ?>
         </div>
+
+        <?php if( $iphone_featured_url && $iphone_left_url && $iphone_right_url): ?>
+        <div class="container container--iphone">
+            <div class="iphone__container u-align-center">
+                <div class="featured__image featured__image--iphone iphone__left" style="background-image: url('<?php echo $iphone_left_url; ?>');"></div>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/iphone.svg" class="iphone u-margin-center" alt="A thumbnail of the <?php the_title(); ?> project." title="<?php the_title(); ?>">
+                <div class="featured__image featured__image--iphone" style="background-image: url('<?php echo $iphone_featured_url; ?>');"></div>
+                <div class="featured__image featured__image--iphone iphone__right" style="background-image: url('<?php echo $iphone_right_url; ?>');"></div>
+            </div>
+        </div>
+        <?php endif; ?>
 
     </main>
 

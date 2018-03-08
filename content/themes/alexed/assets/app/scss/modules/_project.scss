@@ -12,11 +12,11 @@
 /* $. Setup
 \*----------------------------------------------------------------*/
 
-.macbook__container {
+.macbook__container, .iphone__container {
 	position: relative;
 }
 
-.macbook {
+.macbook, .iphone {
 	display: none;
 
 	@include respond-min($bp3) {
@@ -24,27 +24,84 @@
 	}
 }
 
+.iphone {
+	@include respond-min($bp3) {
+		width: 250px;
+	}
+}
+
 .featured__image {
 	width: auto;
-	height: 250px;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 
 	@include respond-min($bp2) {
-		width: 596px;
-		height: 351px;
 		margin: 0 auto;
 	}
 
 	@include respond-min($bp3) {
 		position: absolute;
-		top: 4px;
 		left: 50%;
 		margin: 0;
 		transform: translateX(-50%);
+	}
+}
+
+.featured__image--macbook {
+	height: 250px;
+
+	@include respond-min($bp2) {
+		width: 596px;
+		height: 351px;
+	}
+
+	@include respond-min($bp3) {
+		top: 4px;
 		border-top-left-radius: 12px;
 		border-top-right-radius: 12px;
+	}
+}
+
+.featured__image--iphone {
+	height: 250px;
+	margin-bottom: $base;
+
+	@include respond-min($bp2) {
+		width: 220px;
+		height: 380px;
+	    display: inline-block;
+	    margin: 0 $base/2;
+	}
+
+	@include respond-min($bp3) {
+		top: 56px;
+		margin: 0;
+	}
+}
+
+.iphone__left, .iphone__right {
+	@include respond-min($bp2) {
+		margin: 0;
+	}
+}
+
+.iphone__left {
+	@include respond-min($bp3) {
+		left: 120px;
+	}
+	@include respond-min($bp4) {
+		left: 220px;
+	}
+}
+
+.iphone__right {
+	@include respond-min($bp3) {
+		right: -90px;
+		left: auto;
+	}
+	@include respond-min($bp4) {
+		right: 0px;
 	}
 }
 
