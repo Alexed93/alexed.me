@@ -49,10 +49,13 @@
 /* $. Variations
 \*----------------------------------------------------------------*/
 
+.hero--image {
+	background-size: cover;
+}
+
 .hero--work {
 	@include respond-min($bp2) {
 		background-image: url("../img/background--work.svg");
-		background-size: cover;
 		background-position: center center;
 	}
 }
@@ -60,7 +63,15 @@
 .hero--blog {
 	@include respond-min($bp2) {
 		background-image: url("../img/background--blog.svg");
-		background-size: cover;
 		background-position: center center;
 	}
 }
+
+.hero--contact {
+	@include respond-min($bp2) {
+		background-image: url("../img/background--contact.svg");
+		background-position: center center;
+	}
+}
+
+

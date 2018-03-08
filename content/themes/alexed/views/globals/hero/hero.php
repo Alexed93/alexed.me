@@ -12,11 +12,15 @@
 $hero_type = '';
 
 if( is_page_template('tpl-work.php') ):
-    $hero_type = 'hero--work';
+    $hero_type = 'hero--image hero--work';
+endif;
+
+if( is_page(10) ):
+    $hero_type = 'hero--image hero--contact';
 endif;
 
 if( is_home() || is_category() ):
-    $hero_type = 'hero--blog';
+    $hero_type = 'hero--image hero--blog';
 endif;
 
 ?>

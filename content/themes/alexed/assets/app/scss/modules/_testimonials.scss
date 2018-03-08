@@ -40,3 +40,11 @@
 
 .testimonial__author {
 }
+
+.background__logo {
+	@include respond-min($bp2) {
+		background-image: url("../img/background--logo.svg");
+		background-position: center center;
+		background-size: cover;
+	}
+}

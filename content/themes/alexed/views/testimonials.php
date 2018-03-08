@@ -14,7 +14,7 @@ $testimonials = get_field('testimonials');
 
 ?>
 
-<div class="testimonials">
+<div class="testimonials background__logo">
     <div class="container container--small ">
         <?php if( have_rows('testimonials') ): ?>
         <div class="testimonial js-testimonial">

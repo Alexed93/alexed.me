@@ -22,7 +22,7 @@
 .battenberg {
     @extend .cf;
     width: 100%;
-    margin-bottom: $base;
+    margin: $base 0;
 
     @include respond-min($bp2){
         display: table;
@@ -30,7 +30,7 @@
     }
 
     @include respond-min($bp2){
-        margin-bottom: $base*2;
+        margin: $base*2 0;
     }
 }
 
