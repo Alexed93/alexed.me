@@ -147,8 +147,12 @@
 \*----------------------------------------------------------------*/
 
 .post__card {
+    border-top: 1px solid #d9d9d9;
+    padding: $base 0;
+
     @include respond-min($bp2) {
         padding-right: $base*5;
+        padding: $base*2 0;
     }
 }
 
