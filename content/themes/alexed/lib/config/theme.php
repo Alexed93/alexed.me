@@ -146,8 +146,15 @@ add_image_size('project_thumbnail_iphone', 220, 380, true);
 add_image_size('project_thumbnail_full', 1240, 350, true);
 add_image_size('content_image', 600, 600, true);
 add_image_size('gallery_image', 300, 300, true);
+add_image_size('content_image', 450);
 
+add_filter( 'image_size_names_choose', 'my_custom_sizes' );
 
+function my_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'content_image' => __( 'Content image' ),
+    ) );
+}
 
 /**
  * $. Update functions to HTML5
