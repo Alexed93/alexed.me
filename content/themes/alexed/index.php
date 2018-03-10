@@ -55,10 +55,11 @@ $images = get_field('gallery');
 
             </div>
 
-            <div class="grid__item grid__item--3-12-bp2">
-                <?php get_sidebar('blog'); ?>
-            </div>
-
+            <?php if( !is_page(10) ): ?>
+                <div class="grid__item grid__item--3-12-bp2">
+                    <?php get_sidebar('blog'); ?>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </main>
