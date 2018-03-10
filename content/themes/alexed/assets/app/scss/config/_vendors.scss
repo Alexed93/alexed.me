@@ -83,16 +83,18 @@ $gr-item-align-y: top;                      // Initial vertical alignment of the
 .test--flexbox {
 
     .grid--flex {
-        display: flex;
-        flex-wrap: wrap;
-
-        .grid__item {
+        @include respond-min($bp3) {
             display: flex;
+            flex-wrap: wrap;
 
-            // > * {
-            //     display: flex;
-            //     height: 100%;
-            // }
+            .grid__item {
+                display: flex;
+
+                // > * {
+                //     display: flex;
+                //     height: 100%;
+                // }
+            }
         }
     }
 }

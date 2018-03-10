@@ -39,6 +39,10 @@
         margin: 0 0 $base 0;
     }
 
+    img.alignright,img.alignleft {
+        max-height: 600px;
+    }
+
     h3 {
         margin-bottom: $base/2;
     }
@@ -46,7 +50,11 @@
     @include respond-min($bp3) {
         img {
             margin: 0;
-            padding-bottom: $base*3;
+            // padding-bottom: $base*3;
+
+            &:last-of-type {
+                padding-bottom: 0;
+            }
         }
         img.alignright {
             margin-left: $base*2;
@@ -55,8 +63,9 @@
             margin-right: $base*2;
         }
     }
-
 }
+
+
 
 .container--gallery, .container--iphone {
     @include respond-min($bp2) {

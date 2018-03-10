@@ -22,3 +22,11 @@
     a:not(.btn) {
     }
 }
+
+.content--cms {
+	margin: $base*2 0;
+
+	@include respond-min($bp2) {
+		margin: $base*3 0;
+	}
+}

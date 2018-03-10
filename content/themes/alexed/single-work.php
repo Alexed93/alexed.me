@@ -9,9 +9,14 @@
  */
 
 $image                  = get_field('featured_image');
-$image_url              = $image['sizes']['project_thumbnail'];
+$image_url              = $image['sizes']['project_thumbnail_featured'];
 
 $brief                  = get_field('brief');
+
+$download_url           = get_field('download');
+
+$image_mac              = get_field('featured_image_mac');
+$image_mac_url          = $image['sizes']['project_thumbnail_mac'];
 
 $image_left             = get_field('image_left');
 $image_left_url         = $image_left['sizes']['project_thumbnail'];
@@ -50,32 +55,47 @@ get_header();
 
     <main class="section">
         <div class="container container--small">
-            <div class="macbook__container">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/macbook.svg" class="macbook u-margin-center" alt="A thumbnail of the <?php the_title(); ?> project." title="<?php the_title(); ?>">
-                <div class="featured__image featured__image--macbook" style="background-image: url('<?php echo $image_url; ?>');"></div>
+
+            <div class="macbook__container u-align-center">
+                <?php if( $image_mac_url ): ?>
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/macbook.svg" class="macbook u-margin-center" alt="A thumbnail of the <?php the_title(); ?> project." title="<?php the_title(); ?>">
+                    <div class="featured__image featured__image--macbook" style="background-image: url('<?php echo $image_url_mac; ?>');"></div>
+                <?php else: ?>
+                    <!-- <img src="<?php //echo $image_url; ?>" class="u-margin-center" alt="A thumbnail of the <?php //the_title(); ?> project." title="<?php //the_title(); ?>"> -->
+                <?php endif; ?>
             </div>
-            <h2 class="brief__title u-push-top u-push-bottom/2">Project brief</h2>
-            <p class="brief u-pad-sides@4"><?php echo $brief; ?></p>
+
+            <h2 class="brief__title u-push-top u-push-bottom/2 alpha">Project brief</h2>
+            <p class="brief delta u-pad-sides@4"><?php echo $brief; ?></p>
+
+            <?php if( $download ): ?>
+                <a href="<?php echo $btn_url; ?>" class="btn btn--primary card__button">
+                    Download this project
+                </a>
+            <?php endif; ?>
+
         </div>
 
-        <div class="container container--gallery">
+        <?php if( $image_right_url && $image_left_url ): ?>
+        <div class="container container--gallery test--flexbox">
 
-            <div class="grid grid--spaced">
-                <?php if( $image_right_url && $image_left_url ): ?>
-                    <div class="grid__item grid__item--6-12-bp2">
-                        <div class="grid__image" style="background-image: url('<?php echo $image_left_url; ?>');"></div>
-                    </div>
-                    <div class="grid__item grid__item--6-12-bp2">
-                        <div class="grid__image" style="background-image: url('<?php echo $image_right_url; ?>');"></div>
-                    </div>
-                <?php endif; ?>
+            <div class="grid grid--spaced grid--flex">
+
+                <div class="grid__item grid__item--6-12-bp2">
+                    <img class="grid__image" src="<?php echo $image_left_url; ?>" alt="<?php echo $image['alt']; ?>" />
+                </div>
+                <div class="grid__item grid__item--6-12-bp2">
+                    <img class="grid__image" src="<?php echo $image_right_url; ?>" alt="<?php echo $image['alt']; ?>" />
+                </div>
 
                 <?php if( $image_full_url ): ?>
                     <div class="grid__item">
-                        <div class="grid__image grid__image--full" style="background-image: url('<?php echo $image_full_url; ?>');"></div>
+                        <img class="grid__image grid__image--full" src="<?php echo $image_full_url; ?>" alt="<?php echo $image['alt']; ?>" />
                     </div>
                 <?php endif; ?>
+
             </div>
+        <?php endif; ?>
 
         </div>
 
@@ -83,20 +103,20 @@ get_header();
             <?php the_content(); ?>
         </div>
 
-        <?php if( $images ): ?>
-        <div class="container container--image_gallery">
-            <div class="grid grid--spaced">
-                <?php foreach( $images as $image ): ?>
-                    <div class="grid__item grid__item--3-12-bp3">
-                        <img class="image_gallery__image" src="<?php echo $image['sizes']['gallery_image']; ?>" alt="<?php echo $image['alt']; ?>" />
+        <?php //if( $images ): ?>
+<!--         <div class="container container--image_gallery test--flexbox u-push-bottom u-push-top@2">
+            <div class="grid grid--spaced grid--flex">
+                <?php //foreach( $images as $image ): ?>
+                    <div class="grid__item grid__item--4-12-bp2 grid__item--3-12-bp4">
+                        <img class="image_gallery__image" src="<?php //echo $image['sizes']['gallery_image']; ?>" alt="<?php //echo $image['alt']; ?>" />
                     </div>
-                <?php endforeach; ?>
+                <?php //endforeach; ?>
             </div>
-        </div>
-        <?php endif; ?>
+        </div> -->
+        <?php //endif; ?>
 
         <?php if( $iphone_featured_url && $iphone_left_url && $iphone_right_url): ?>
-        <div class="container container--iphone">
+        <div class="container container--iphone u-push-bottom">
             <div class="iphone__container u-align-center">
                 <div class="featured__image featured__image--iphone iphone__left" style="background-image: url('<?php echo $iphone_left_url; ?>');"></div>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/iphone.svg" class="iphone u-margin-center" alt="A thumbnail of the <?php the_title(); ?> project." title="<?php the_title(); ?>">
@@ -107,7 +127,7 @@ get_header();
         <?php endif; ?>
 
         <?php if( $quote && $date_author ): ?>
-        <div class="testimonials testimonials--inverted">
+        <div class="testimonials u-zero-bottom">
             <div class="container container--small ">
                 <div class="testimonial">
                     <div class="testimonial__container">

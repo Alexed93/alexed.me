@@ -12,15 +12,16 @@
 
 .testimonials {
 	width: 100%;
-	padding: $base*2 $base*2 $base*2.5 $base*2;
+	padding: $base*1.5 0;
 	margin-bottom: $base;
 	background: $black;
 	color: $white;
-	text-align: center;
+	text-align: left;
 
 	@include respond-min($bp2) {
 		padding: $base*3 $base*3 $base*3.5 $base*3;
 		margin-bottom: $base*2;
+		text-align: center;
 	}
 }
 

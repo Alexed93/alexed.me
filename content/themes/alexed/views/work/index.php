@@ -3,7 +3,7 @@
     $btn_url      = get_permalink();
     $btn_label    = 'View the "' . $title  . '" project';
     $image        = get_field('featured_image');
-    $image_url    = $image['sizes']['project_thumbnail'];
+    $image_url    = $image['sizes']['project_thumbnail_featured'];
 ?>
 
 <div class="grid__item grid__item--6-12-bp2"> <!-- Additional projects results grid item start -->
