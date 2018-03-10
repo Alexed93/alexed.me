@@ -174,3 +174,12 @@
 .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
     padding: $base !important;
 }
+
+
+/* $. Codepen embed
+\*----------------------------------------------------------------*/
+
+.cp_embed_iframe {
+    height: 545px;
+    margin-top: $base;
+}
