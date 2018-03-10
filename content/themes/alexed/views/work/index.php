@@ -1,7 +1,7 @@
 <?php
     $title        = get_the_title();
     $btn_url      = get_permalink();
-    $btn_label    = 'View the ' . $title  . ' project';
+    $btn_label    = 'View the "' . $title  . '" project';
     $image        = get_field('featured_image');
     $image_url    = $image['sizes']['project_thumbnail'];
 ?>
