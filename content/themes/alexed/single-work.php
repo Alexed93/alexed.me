@@ -14,6 +14,7 @@ $image_url              = $image['sizes']['project_thumbnail_featured'];
 $brief                  = get_field('brief');
 
 $download_url           = get_field('download');
+$view_url               = get_field('view_url');
 
 $image_mac              = get_field('featured_image_mac');
 $image_mac_url          = $image['sizes']['project_thumbnail_mac'];
@@ -69,8 +70,12 @@ get_header();
             <p class="brief delta u-pad-sides@4"><?php echo $brief; ?></p>
 
             <?php if( $download ): ?>
-                <a href="<?php echo $btn_url; ?>" class="btn btn--primary card__button">
+                <a href="<?php echo $download_url; ?>" class="btn btn--primary card__button">
                     Download this project
+                </a>
+            <?php else: ?>
+                <a href="<?php echo $view_url; ?>" class="btn btn--primary card__button">
+                    View this live project
                 </a>
             <?php endif; ?>
 

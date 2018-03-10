@@ -39,7 +39,7 @@ $i = 1;
                 $box_output .= '<h2 class="battenberg__title gamma u-push-bottom/2">'.$title.'</h2>';
             endif;
             if($excerpt):
-                $box_output .= '<p class="battenberg__excerpt">'.$excerpt.'</p>';
+                $box_output .= '<p class="battenberg__excerpt delta">'.$excerpt.'</p>';
             endif;
 
             // build button

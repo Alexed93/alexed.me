@@ -17,7 +17,8 @@
     width: 100%;
     position: relative;
     margin-bottom: $base*2;
-    padding-bottom: $base*3;
+    padding: $base $base $base*5 $base;
+    background: #f1f1f1;
 
     @include respond-min($bp2) {
         margin-bottom: $base*3;
@@ -48,8 +49,8 @@
 
 .card__button {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: $base;
+    left: $base;
 }
 
 

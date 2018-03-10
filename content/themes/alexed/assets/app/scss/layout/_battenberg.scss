@@ -23,6 +23,7 @@
     @extend .cf;
     width: 100%;
     margin: $base 0;
+    padding: $base;
 
     @include respond-min($bp2){
         display: table;
@@ -43,6 +44,8 @@
 }
 
 .battenberg--right {
+    background: #f1f1f1;
+
     .battenberg__box {
         padding: 0;
 
