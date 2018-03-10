@@ -24,35 +24,44 @@ $images = get_field('gallery');
 
 <main class="section">
     <div class="container">
+        <div class="grid grid--spaced">
 
-        <div class="content">
-        <?php if ( have_posts() ): ?>
-            <?php while ( have_posts() ): ?>
-                <?php the_post(); ?>
+            <?php if ( have_posts() ): ?>
 
-                <article>
-                    <?php the_content(); ?>
-                </article>
+            <div class="grid__item grid__item--9-12-bp2">
 
-            <?php endwhile; ?>
-        <?php else: ?>
-            <?php get_template_part( 'views/errors/404-posts' ); ?>
-        <?php endif; ?>
-        </div>
+                <?php while ( have_posts() ): ?>
+                    <?php the_post(); ?>
 
-        <?php if( $images ): ?>
-        <div class="u-push-top@2">
-            <div class="grid grid--spaced">
-                <?php foreach( $images as $image ): ?>
-                    <div class="grid__item grid__item--3-12-bp3">
-                        <img class="image_gallery__image" src="<?php echo $image['sizes']['gallery_image']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <article>
+                        <?php the_content(); ?>
+                    </article>
+
+                    <?php if( $images ): ?>
+                    <div class="u-push-top@2">
+                        <div class="grid grid--spaced">
+                            <?php foreach( $images as $image ): ?>
+                                <div class="grid__item grid__item--3-12-bp3">
+                                    <img class="image_gallery__image" src="<?php echo $image['sizes']['gallery_image']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
                     </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-        <?php endif; ?>
+                    <?php endif; ?>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <?php get_template_part( 'views/errors/404-posts' ); ?>
+            <?php endif; ?>
 
+            </div>
+
+            <div class="grid__item grid__item--3-12-bp2">
+                <?php get_sidebar('blog'); ?>
+            </div>
+
+        </div>
     </div>
 </main>
 
 <?php get_footer(); ?>
+

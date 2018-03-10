@@ -28,7 +28,7 @@ get_header();
                     <?php endwhile; ?>
 
                     <!-- Pagination -->
-                    <?php get_template_part( 'views/globals/pagination' ); wp_reset_query(); ?>
+                    <?php get_template_part( 'views/globals/pagination' ); ?>
 
                 <?php else: ?>
                     <?php get_template_part( 'views/errors/404-posts' ); ?>

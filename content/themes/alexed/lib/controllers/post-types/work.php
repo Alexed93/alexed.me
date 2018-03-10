@@ -29,7 +29,7 @@
  *
  * @return object  WP_Query instance
  */
-function wpst_get_projects($excludes = [], $count = -1 ) {
+function wpst_get_projects( $excludes = [], $count = -1 ) {
     // Define arguments for query.
     $args = array(
         'post_type' => 'work',
