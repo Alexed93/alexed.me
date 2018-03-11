@@ -141,7 +141,7 @@ if ( get_option("large_crop") === false ) {
  * https://developer.wordpress.org/reference/functions/add_image_size/ for more info.
  */
 
-add_image_size('project_thumbnail_featured', 600, 360, true);
+add_image_size('project_thumbnail_featured', 600, 360);
 add_image_size('project_thumbnail', 600);
 add_image_size('project_thumbnail_iphone', 220, 380, true);
 add_image_size('project_thumbnail_full', 1240);

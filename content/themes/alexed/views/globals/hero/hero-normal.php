@@ -20,7 +20,7 @@ endif;
 ?>
 
 <div class="container container--small">
-    <div class="hero__text u-align-center">
+    <div class="hero__text">
         <h1 class="u-zero-bottom""><?php echo $title; ?></h1>
         <h2 class="u-zero-top u-zero-bottom"><?php echo $subtitle; ?></h2>
         <p class="delta u-push-top/2 u-zero-bottom u-pad-sides@4">

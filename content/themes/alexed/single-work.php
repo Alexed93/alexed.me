@@ -57,24 +57,22 @@ get_header();
     <main class="section">
         <div class="container container--small">
 
+            <?php if( $image_mac_url ): ?>
             <div class="macbook__container u-align-center">
-                <?php if( $image_mac_url ): ?>
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/macbook.svg" class="macbook u-margin-center" alt="A thumbnail of the <?php the_title(); ?> project." title="<?php the_title(); ?>">
-                    <div class="featured__image featured__image--macbook" style="background-image: url('<?php echo $image_url_mac; ?>');"></div>
-                <?php else: ?>
-                    <!-- <img src="<?php //echo $image_url; ?>" class="u-margin-center" alt="A thumbnail of the <?php //the_title(); ?> project." title="<?php //the_title(); ?>"> -->
-                <?php endif; ?>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/macbook.svg" class="macbook u-margin-center" alt="A thumbnail of the <?php the_title(); ?> project." title="<?php the_title(); ?>">
+                <div class="featured__image featured__image--macbook" style="background-image: url('<?php echo $image_url_mac; ?>');"></div>
             </div>
+            <?php endif; ?>
 
             <h2 class="brief__title u-push-top u-push-bottom/2 alpha">Project brief</h2>
             <p class="brief delta u-pad-sides@4"><?php echo $brief; ?></p>
 
             <?php if( $download ): ?>
-                <a href="<?php echo $download_url; ?>" class="btn btn--primary card__button">
+                <a href="<?php echo $download_url; ?>" class="btn btn--primary u-display-block u-margin-center">
                     Download this project
                 </a>
-            <?php else: ?>
-                <a href="<?php echo $view_url; ?>" class="btn btn--primary card__button">
+            <?php elseif ( $view) : ?>
+                <a href="<?php echo $view_url; ?>" class="btn btn--primary u-display-block u-margin-center">
                     View this live project
                 </a>
             <?php endif; ?>
@@ -82,9 +80,9 @@ get_header();
         </div>
 
         <?php if( $image_right_url && $image_left_url ): ?>
-        <div class="container container--gallery test--flexbox">
+        <div class="container container--gallery">
 
-            <div class="grid grid--spaced grid--flex">
+            <div class="grid grid--spaced">
 
                 <div class="grid__item grid__item--6-12-bp2">
                     <img class="grid__image" src="<?php echo $image_left_url; ?>" alt="<?php echo $image['alt']; ?>" />
