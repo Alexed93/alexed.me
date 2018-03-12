@@ -48,7 +48,7 @@
     // background: #f1f1f1;
 
     .battenberg__box {
-        padding: 0;
+        padding: $base $base $base*2 $base;
 
         @include respond-min($bp2) {
             padding: $base $base $base $base*2;
@@ -58,7 +58,7 @@
 
 .battenberg--left {
     .battenberg__box {
-        padding: 0;
+        padding: $base $base $base*2 $base;
 
         @include respond-min($bp2) {
             padding: $base $base*2 $base $base;
