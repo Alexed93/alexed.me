@@ -80,6 +80,8 @@
     @include respond-min($bp2){
         display: table-cell;
         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
 
