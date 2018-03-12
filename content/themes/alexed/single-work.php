@@ -65,7 +65,7 @@ get_header();
             <?php endif; ?>
 
             <h2 class="brief__title u-push-top u-push-bottom/2 alpha">Project brief</h2>
-            <p class="brief delta u-pad-sides@4"><?php echo $brief; ?></p>
+            <p class="brief delta u-pad-sides@2"><?php echo $brief; ?></p>
 
             <?php if( $download_url ): ?>
                 <a href="<?php echo $download_url; ?>" class="btn btn--primary btn--project u-display-block u-margin-center">

@@ -147,13 +147,16 @@ add_image_size('project_thumbnail_mac', 600, 360, true);
 add_image_size('project_thumbnail_iphone', 220, 380, true);
 add_image_size('project_thumbnail_full', 1240);
 add_image_size('gallery_image', 300, 300, true);
-add_image_size('content_image', 450);
+add_image_size('content_image_large', 600);
 
 add_filter( 'image_size_names_choose', 'my_custom_sizes' );
 
 function my_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'content_image' => __( 'Content image' ),
+    ) );
+    return array_merge( $sizes, array(
+        'content_image_large' => __( 'Content image large' ),
     ) );
 }
 
