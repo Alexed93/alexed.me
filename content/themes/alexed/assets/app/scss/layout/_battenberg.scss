@@ -23,7 +23,8 @@
     @extend .cf;
     width: 100%;
     margin: $base 0;
-    padding: $base;
+    // padding: $base;
+    background: #f1f1f1;
 
     @include respond-min($bp2){
         display: table;
@@ -39,18 +40,18 @@
     padding: $base 0;
 
     @include respond-min($bp2) {
-        padding: 0;
+        // padding: $base;
     }
 }
 
 .battenberg--right {
-    background: #f1f1f1;
+    // background: #f1f1f1;
 
     .battenberg__box {
         padding: 0;
 
         @include respond-min($bp2) {
-            padding: 0 0 0 $base*2;
+            padding: $base $base $base $base*2;
         }
     }
 }
@@ -60,7 +61,7 @@
         padding: 0;
 
         @include respond-min($bp2) {
-            padding: 0 $base*2 0 0;
+            padding: $base $base*2 $base $base;
         }
     }
 }

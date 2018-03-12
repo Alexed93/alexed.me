@@ -67,6 +67,16 @@ input[type="submit"],
 .btn--tertiary {}
 .btn--invert {}
 
+.btn--project {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include respond-min($bp2) {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
 /**
  * Position and size
  */

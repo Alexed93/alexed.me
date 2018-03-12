@@ -17,7 +17,7 @@ $download_url           = get_field('download');
 $view_url               = get_field('view_url');
 
 $image_mac              = get_field('featured_image_mac');
-$image_mac_url          = $image['sizes']['project_thumbnail_mac'];
+$image_mac_url          = $image_mac['sizes']['project_thumbnail_mac'];
 
 $image_left             = get_field('image_left');
 $image_left_url         = $image_left['sizes']['project_thumbnail'];
@@ -55,12 +55,12 @@ get_header();
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <main class="section">
-        <div class="container container--small">
+        <div class="container container--small container--brief">
 
             <?php if( $image_mac_url ): ?>
             <div class="macbook__container u-align-center">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/macbook.svg" class="macbook u-margin-center" alt="A thumbnail of the <?php the_title(); ?> project." title="<?php the_title(); ?>">
-                <div class="featured__image featured__image--macbook" style="background-image: url('<?php echo $image_url_mac; ?>');"></div>
+                <div class="featured__image featured__image--macbook" style="background-image: url('<?php echo $image_mac_url; ?>');"></div>
             </div>
             <?php endif; ?>
 
@@ -68,11 +68,11 @@ get_header();
             <p class="brief delta u-pad-sides@4"><?php echo $brief; ?></p>
 
             <?php if( $download_url ): ?>
-                <a href="<?php echo $download_url; ?>" class="btn btn--primary u-display-block u-margin-center">
+                <a href="<?php echo $download_url; ?>" class="btn btn--primary btn--project u-display-block u-margin-center">
                     Download this project
                 </a>
             <?php elseif ( $view_url ) : ?>
-                <a href="<?php echo $view_url; ?>" class="btn btn--primary u-display-block u-margin-center">
+                <a href="<?php echo $view_url; ?>" class="btn btn--primary btn--project u-display-block u-margin-center">
                     View this live project
                 </a>
             <?php endif; ?>
