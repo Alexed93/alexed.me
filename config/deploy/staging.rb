@@ -9,7 +9,7 @@ set :branch, 'development'
 set :stage, :staging
 
 # The URL of the website in this environment.
-set :stage_url, 'http://www.staging.alexed.me'
+set :stage_url, 'http://staging.alexed.me'
 
 # The environment's server credentials
 server 'elm-01.mixd.co.uk', user: 'mixdremote', roles: %w(web app db)
