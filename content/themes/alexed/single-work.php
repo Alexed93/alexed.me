@@ -13,8 +13,11 @@ $image_url              = $image['sizes']['project_thumbnail_featured'];
 
 $brief                  = get_field('brief');
 
-$download_url           = get_field('download');
-$view_url               = get_field('view_url');
+$download               = get_field('download');
+$view                   = get_field('view_url');
+
+$download_url           = $download['url'];
+$view_url               = $view['url'];
 
 $image_mac              = get_field('featured_image_mac');
 $image_mac_url          = $image_mac['sizes']['project_thumbnail_mac'];
@@ -66,6 +69,8 @@ get_header();
 
             <h2 class="brief__title u-push-top u-push-bottom/2 alpha">Project brief</h2>
             <p class="brief delta u-pad-sides@2"><?php echo $brief; ?></p>
+
+            <?php var_dump($download_url); ?>
 
             <?php if( $download_url ): ?>
                 <a href="<?php echo $download_url; ?>" class="btn btn--primary btn--project u-display-block u-margin-center">
