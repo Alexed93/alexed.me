@@ -18,8 +18,8 @@ set :wp_sitename, 'Alex Edwards'
 set :wp_localurl, 'http://alexed.local'
 
 # An identifying name for the application to be used by Capistrano
-set :application, 'wp-deploy'
-set :repo_url, 'git@github.com:Mixd/wp-deploy.git'
+set :application, 'alexed'
+set :repo_url, 'git@github.com:Alexed93/alexed.me.git'
 
 
 ################################################################################

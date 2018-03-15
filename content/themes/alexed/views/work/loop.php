@@ -63,6 +63,8 @@ if( is_front_page() ) {
                 <?php get_template_part('views/work/index'); ?>
             <?php endwhile; ?>
 
+    </div> <!-- Projects grid end -->
+
             <!-- Pagination -->
             <?php if( !is_front_page() ) : ?>
                 <?php $wp_query = $projects; get_template_part( 'views/globals/pagination' ); wp_reset_query(); ?>
@@ -71,8 +73,6 @@ if( is_front_page() ) {
         <?php wp_reset_postdata(); else: ?>
             <?php get_template_part( 'views/errors/404-posts' ); ?>
         <?php endif; wp_reset_query(); ?>
-
-    </div> <!-- Projects grid end -->
 
 </div> <!-- Projects results end -->
 

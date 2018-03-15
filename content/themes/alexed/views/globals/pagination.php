@@ -9,7 +9,7 @@
 
 <?php if ( $total_pages > 1 ) : ?>
 
-<div class="grid__item grid__item--12-12-bp2">
+<!-- <div class="grid__item grid__item--12-12-bp2"> -->
     <div class="pagination u-push-top u-push-bottom">
         <?php if ($offset): ?>
             <!-- Previous Results Page -->
@@ -30,6 +30,6 @@
             <a href="<?php echo esc_url( add_query_arg( 'offset', $offset+$ppp ) ); ?>" class="last">Next</a>
         <?php endif; ?>
     </div>
-</div>
+<!-- </div> -->
 
 <?php endif; ?>

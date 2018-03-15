@@ -1,4 +1,8 @@
-<?
+<?php
+
+$title = '';
+$subtitle = '';
+$excerpt = '';
 
 $blog_page = get_option( 'page_for_posts' );
 $current_cat = is_category( get_queried_object() ) ? get_queried_object()->name : '';

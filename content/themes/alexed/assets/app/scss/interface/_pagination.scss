@@ -1,17 +1,20 @@
 .pagination {
     margin-top: $base*2;
     padding: ($base/2) 0;
-    font-size: 1.2rem;
     border-top: 1px solid $grey-lighter;
     border-bottom: 1px solid $grey-lighter;
 
-    a, span {
+    a, span, .wp-pagenavi a {
         display: inline-block;
+        border: none;
+        font-size: 1.2rem;
     }
 
-    a {
+    a, .wp-pagenavi a, .pagination .wp-pagenavi span.current {
         margin: 0 $base/4;
         font-size: 1.25rem;
+        color: #000;
+        border-bottom: 1px solid #000;
         // border-bottom: 1px solid $color-link;
     }
 
@@ -24,11 +27,16 @@
         // border-bottom: 0;
     }
 
-    .disabled a {
-        border-bottom: none;
+    .disabled a, .wp-pagenavi span.current  {
+        border: none;
+        font-weight: $weight-normal;
     }
 
     .last {
         margin-left: $base/2;
     }
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+    padding: 0 !important;
 }
