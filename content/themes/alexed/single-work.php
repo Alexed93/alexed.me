@@ -46,6 +46,7 @@ $date                   = get_field('feedback_date');
 $date_author            = $author . ', ' . '(' . $date . ')';
 
 $images                 = get_field('gallery');
+$container_padding      = '';
 
 // Get the header
 get_header();
@@ -57,8 +58,15 @@ get_header();
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+    <?php if( $download_url || $view_url ):
+            $container_padding = "container--brief";
+        else:
+            $container_padding = "";
+        endif;
+    ?>
+
     <main class="section">
-        <div class="container container--small container--brief">
+        <div class="container container--small <?php echo $container_padding; ?>">
 
             <?php if( $image_mac_url ): ?>
             <div class="macbook__container u-align-center">
