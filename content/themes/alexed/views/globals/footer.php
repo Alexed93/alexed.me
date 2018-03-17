@@ -26,6 +26,11 @@
 
             <div class="grid__item grid__item--9-12-bp2">
                 <div class="social-icons">
+                    <a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/files/cv.pdf" class="u-no-border">
+                        <p class="is-hidden">CV</p>
+                        <i class="icon icon--cv icon--social"></i>
+                    </a>
+
                     <a href="https://twitter.com/alexed93?lang=en" class="u-no-border">
                         <p class="is-hidden">Twitter</p>
                         <i class="icon icon--twitter icon--social"></i>
