@@ -16,4 +16,3 @@ server 'beech-01.mixd.co.uk', user: 'mixdremote', roles: %w(web app db)
 
 # The deploy path to the website on this environment's server.
 set :deploy_to, '/var/www/vhosts/alexed.me/httpdocs'
-
