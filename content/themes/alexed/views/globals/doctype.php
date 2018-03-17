@@ -45,4 +45,4 @@
     <!-- wp_head -->
     <?php wp_head(); ?>
 </head>
-<body class="debug">
+<body class="">
